@@ -1,0 +1,45 @@
+   <ul>
+        <% tweetsList.forEach((list)=> { %>  
+          <li><%= list.texts %></li>
+       
+         
+      </ul>
+
+
+exports.getTwenty = (callback) => {
+    db.query('SELECT * FROM tweets ORDER BY id DESC LIMIT 20', (error, result) => {
+        if(error){
+            console.log('error: ', error);
+            callback(error, null);
+            return;
+        }
+
+        console.log(result);
+        callback(null, result);
+    })
+
+}
+
+<div class="comments">
+
+                <% tweetsList.forEach((list)=> { %>
+
+                    <div class="comments-comment">
+                        <a href="/username"><img src="" alt=""></a>
+                        <div class="comments-comment-content">
+                            <div class="comments-comment-content-nameDate">
+                                <a href="/username">
+                                    <h3 class="comments-comment-content-username">The author of the tweet will be
+                                        revealed soon!</h3>
+                                </a>
+                                <span class="comments-comment-content-date">
+                                    <%= list.creation_date %>
+                                </span>
+                            </div>
+                            <p class="comments-comment-content-text"> <%= list.texts %></p>
+            
+                        </div>
+                    </div>
+                    <% }) %>
+
+            </div>
