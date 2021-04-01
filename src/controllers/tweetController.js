@@ -6,10 +6,42 @@ const tweets = require('../models/tweets');
 exports.findTwenty = (request, response) => {
 
     tweets.getTwenty((error, tweetsInfo) => {
-        if(error){
+        if (error) {
             response.send(error.message);
         }
 
-        response.render(('home.ejs'), {tweetsInfo});
+        response.render(('home.ejs'), { tweetsInfo });
     });
 }
+//II-On récupère les tweets d'un utilisateur en particulier
+exports.findUserTweets = (request, response) => {
+
+    const { id } = request.params;
+
+    tweets.getUserTweets(id, (error, userTweet) => {//?
+        if (error) {
+            response.send(error.message);
+        }
+        response.render(('userTweets.ejs'), { userTweet });
+    })
+
+}
+
+//III-Utilisateur je veux consulter le détail d'un tweet
+exports.findUsersTweetsDetails = (request, response) => {
+
+    const { id } = request.params;
+    const { tweetId } = request.params;
+
+    tweets.getUsersTweetsDetails(id, tweetId, (error, userTweetDet) => {//?
+
+        response.render(('tweetDetails.ejs'), { id, userTweetDet });
+       
+    })
+
+
+}
+
+
+
+    
