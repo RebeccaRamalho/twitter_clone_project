@@ -41,6 +41,7 @@
 
         <div class="tweet-container">
             <div class="tweet-container-title">
+                
                 <h3>Laurent Jade</h3>
             </div>
             <div class="tweet-container-profile">
@@ -51,11 +52,11 @@
                     <img src="" alt="">
                 </div>
 
-                <% userTweet.forEach((list)=> { %>
-
-
+                
 
                     <div class="comments">
+
+              <% connectedUserTweet.forEach((list)=> { %>
 
                         <div class="comments-comment">
                             <a href="/username"><img src="" alt=""></a>
@@ -68,16 +69,16 @@
                                     </a>
                                 </div>
                                 <p class="comments-comment-content-text">
-                                   <%= list.texts %>  <a href="/users/<%= list.id_user%>"></a> <br/>
-                                    <button><a href="/users/<%=list.id_user%>/tweets/<%=list.id%>">Tweets details</a></button>
+                                   <%= list.texts %> <form action="/tweets/<%= list.id %>" method="POST"><button type="submit">Delete</button></form>
+                                   <button><a href="/tweets/<%=list.id%>">Tweets details</a> </button>
                                    
                                 </p>
                             </div>
                         </div>
+                    <% }) %>
 
                     </div>
 
-                <% }) %>
     </section>
 
 </body>

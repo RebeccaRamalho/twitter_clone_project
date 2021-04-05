@@ -9,7 +9,7 @@ const isAuth = (request, response, next) => {
     //I_We retreive the token when an user try to access all the tweet of an user
     const token = request.cookies.authcookie; 
 
-    console.log(token);
+    // console.log(token);
 
     //II_We check if the token is valid or not
     jwt.verify(token, SECRET, (error, user) => {
@@ -22,7 +22,7 @@ const isAuth = (request, response, next) => {
         /*b_checking of token validity*/
         else{
 
-            const {name, username, exp} = user;// where do we retreive the name?
+            const {username, exp} = user;// where do we retreive the name?
 
             /*1_if the cookie experation date is inferior to the actual date then the cookie has expired*/
 
@@ -32,7 +32,8 @@ const isAuth = (request, response, next) => {
             }
             else{
 
-                request.user = {name, username};
+                request.user = {username};
+                // console.log(user);
                 next();//?
 
             }
