@@ -75,7 +75,7 @@ exports.postTweet = (tweetText, id_user, callback) => {
             callback(error, null);
             return;
         }
-        console.log(result);
+        // console.log(result);
         callback(null, result);
     })
 }
@@ -101,7 +101,22 @@ exports.putUserNewTweet = (id, newValue, callback) => {
             callback(error, null);
             return;
         }
-        console.log(result);
+        // console.log(result);
+        callback(null, result);
+        
+    })
+       
+} 
+
+/*Requête de sauvetage*/
+exports.getUserId = (user,  callback) => {
+    db.query(`SELECT * FROM users WHERE username='${user.username}';`, (error, result) =>{
+        if(error){
+            console.log('error :', error);
+            callback(error, null);
+            return;
+        }
+        // console.log('mmm', result);
         callback(null, result);
         
     })

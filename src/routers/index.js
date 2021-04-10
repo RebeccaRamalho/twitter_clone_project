@@ -27,7 +27,7 @@ routers.get('/users/:id/tweets/:tweetId', tweetController.findUsersTweetsDetails
 
 /*3_b Utilisateur connecté je veux consulter le détail d'un tweet*/
 
-routers.get('/tweets/:tweetId', tweetController.findConnectedUsersTweetsDetails);
+routers.get('/tweeto/:tweetId', tweetController.findConnectedUsersTweetsDetails);
 
 /*B*/
 
@@ -45,7 +45,7 @@ routers.post('/tweets/:tweetsId', isAuth, tweetController.uptadeUserTweets);
 
 /*6-Utilisateur connecté je veux supprimer l'un de mes tweet*/
 
-routers.post('/tweets/:id', isAuth, tweetController.deleteUserTweets);//pk on ne récupère pas l'id avec delete?response.redirect('/username');
+routers.post('/tweet/:tweetsId', isAuth, tweetController.deleteUserTweets);//pk on ne récupère pas l'id avec delete?response.redirect('/username');
 
 
 /*C*/

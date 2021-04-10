@@ -1,11 +1,42 @@
+footer{
+  background-color: #1DA1F2;
+  position: fixed;
+}
 .section-accueil {
   height: 100vh;
   width: 100vw;
   display: flex;
-  background-color:   rgb(29, 161, 242);
+  background-color:   #16212b;
   color: white;
 }
-
+/*
+.tweet-container-form {
+    margin-top: 8vh;
+*/
+.tweet-container-button .button1 {
+  background-color: #1DA1F2;
+  color: white;
+  margin-bottom: -19px;
+  width: 10%;
+  margin-right: 8px;
+  margin-top: 33px;
+}
+.tweet-container-button .button2 {
+  background-color: #1DA1F2;
+  color: white;
+  border: none;
+  padding: 1% 2%;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 121px;
+  height: 44px;
+  margin-right: -631px;
+  margin-top: 18px;
+}
+.comments-comment-content button>a {
+  text-decoration: none;
+  color: black;
+}
 .tweet-navigation {
   width: 25vw;
   height: 100%;
@@ -59,7 +90,16 @@
 .tweet-container-form {
   margin-top: 10vh;
   width: 100%;
-  border-bottom: 10px solid rgba(128, 128, 128, 0.5);
+border-bottom: 3px solid rgba(128, 128, 128, 0.5);
+}
+/* hr{
+  width: 100%;
+  border-bottom: 3px solid rgba(128, 128, 128, 0.5);
+} */
+.tweet-container-form .hr{
+
+  border-bottom: 0px solid rgba(128, 128, 128, 0.5);
+  
 }
 .tweet-container-text {
   display: flex;
@@ -72,7 +112,7 @@
   border-radius: 50%;
 }
 .tweet-container-text textarea {
-  width: 100%;
+  width: 89%;
   margin-left: 3%;
   padding: 1%;
   background-color: transparent;
@@ -102,7 +142,7 @@
   position: relative;
 }
 .tweet-container-profile-background {
-  height: 25vh;
+  height: 48vh;
   background-color: #3d5566;
 }
 .tweet-container-profile-picture {
@@ -111,9 +151,10 @@
   left: 3%;
 }
 .tweet-container-profile-picture img {
-  height: 20vh;
-  width: 20vh;
+  height: 31vh;
+  width: 34vh;
   border-radius: 50%;
+  margin-top: -14px;
 }
 .tweet-container-profile-infos {
   height: 25vh;

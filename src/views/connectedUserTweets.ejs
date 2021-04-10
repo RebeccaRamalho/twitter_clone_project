@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
+    <link rel="icon" href="/images/iconTwitter.png">
+    <title>Twitter</title>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
     <section class="section-accueil">
 
         <div class="tweet-navigation">
-            <img class="tweet-navigation-image" src="/images/logoTwitter.png" alt="">
+            <img class="tweet-navigation-image" src="/images/logoTwitter.png" alt="logoTwitter">
             <div class="tweet-navigation-link">
                 <a href="/">
                     <img src="/images/home-run.png" alt="">
@@ -39,45 +40,53 @@
             </div>
         </div>
 
-        <div class="tweet-container">
-            <div class="tweet-container-title">
-                
-                <h3>Laurent Jade</h3>
-            </div>
-            <div class="tweet-container-profile">
-                <div class="tweet-container-profile-background">
-                    <img src="" alt="">
-                </div>
-                <div class="tweet-container-profile-picture">
-                    <img src="" alt="">
-                </div>
+       
 
-                
+            <div class="tweet-container">
+                <div class="tweet-container-title">
+
+                    <h3>
+                       Kanu Amelia
+                    </h3>
+                </div>
+                <div class="tweet-container-profile">
+                    <div class="tweet-container-profile-background">
+                        <img src="" alt="">
+                    </div>
+                    <div class="tweet-container-profile-picture">
+                        <img src="/images/connectedUser.jpg" alt="">
+                    </div>
+
+
+
+
+                    <% connectedUserTweet.forEach((list)=> { %>
 
                     <div class="comments">
 
-              <% connectedUserTweet.forEach((list)=> { %>
 
-                        <div class="comments-comment">
-                            <a href="/username"><img src="" alt=""></a>
+                    <div class="comments-comment">
+                            <a href="/username"><img src="/images/connectedUser.jpg" alt=""></a>
                             <div class="comments-comment-content">
                                 <div class="comments-comment-content-nameDate">
                                     <a href="/username">
                                         <h3 class="comments-comment-content-username">
-                                            <%= list.username %>
+                                            @<%= list.username %>
                                         </h3>
                                     </a>
                                 </div>
                                 <p class="comments-comment-content-text">
-                                   <%= list.texts %> <form action="/tweets/<%= list.id %>" method="POST"><button type="submit">Delete</button></form>
-                                   <button><a href="/tweets/<%=list.id%>">Tweets details</a> </button>
-                                   
+                                    <%= list.texts %>
+                                      
+                                        <button><a href="/tweeto/<%=list.id%>">Tweets details</a> </button>
+
                                 </p>
                             </div>
                         </div>
-                    <% }) %>
+
 
                     </div>
+        <% }) %>
 
     </section>
 

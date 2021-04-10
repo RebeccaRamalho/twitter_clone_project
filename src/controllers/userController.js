@@ -57,7 +57,7 @@ exports.newAccount = (request, response) => {
 
                 // console.log(hash);
 
-                /*b_we stock user's data (including the hashing psswd) into a variable so we can 
+                /*b_we stock usapper's data (including the hashing psswd) into a variable so we can 
                   send it to the model so that the model can create the user in the db */
 
                 const newUser = {/*comment récupère t-il ces données si il est dans une          autre fonction qui ne les a pas en paramètre?*/
@@ -77,7 +77,8 @@ exports.newAccount = (request, response) => {
                     if (error) {
                         response.send(error.message);
                     }
-                    response.redirect('/');
+                    
+                    response.redirect('/login');
                 })
 
             })
@@ -92,9 +93,10 @@ exports.newAccount = (request, response) => {
 /*B_CONNEXION */
 
 /*I_au clique du bouton connexion redirection sur la page de connexion*/
-exports.login = (request, response) => {
-
-    response.render('login.ejs')
+exports.login = async (request, response) => {
+    const alert_warning = await request.consumeFlash('warning');
+    console.log(alert_warning);
+    response.render('login.ejs', {alert_warning});
 
 }
 
@@ -110,7 +112,7 @@ exports.authenticate = (request, response) => {
 
 
     /*2_*/
-    user.getByUsername(username /*what i send to the model*/, (error, result)/*what i get from the model*/ => {
+    user.getByUsername(username, async /*what i send to the model*/ (error, result)/*what i get from the model*/ => {
 
         /*1-Error managment */
 
@@ -125,7 +127,9 @@ exports.authenticate = (request, response) => {
 
         else if (result.length === 0) {
 
-            response.send('we dont remember you! Are you sure this is your username?');
+            await request.flash('warning', 'We dont remember you! Are you sure this is your username?');
+
+            response.redirect('/login');
         }
 
         else {
@@ -150,6 +154,7 @@ exports.authenticate = (request, response) => {
                 else {
 
                     const user = {
+                        id: result[0].id,
                         last_name: result[0].last_name,
                         username: result[0].username,//ou récupère t-il ça?
                         exp: MAXAGE//expiration of the token of a specific user; 

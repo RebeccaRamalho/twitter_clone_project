@@ -11,12 +11,12 @@ exports.findTwenty = (request, response) => {
 
             response.send(error.message);
         }
-        else{
+        else {
 
-            response.render(('home.ejs'), { tweetsInfo});
-                      
+            response.render(('home.ejs'), { tweetsInfo });
+
         }
-       
+
     });
 
 }
@@ -31,25 +31,25 @@ exports.findUserTweets = (request, response) => {
         if (error) {
             response.send(error.message);
         }
-        response.render(('userTweets.ejs'), { userTweet, user: request.user});
+        response.render(('userTweets.ejs'), { userTweet, user: request.user });
 
     })
 }
 //I_b On récupère les tweets de l'utilisateur connecté
 exports.findConnectedUserTweets = (request, response) => {
 
-    const { user } = request; 
+    const { user } = request;
     tweets.getConnectedUserTweets(user, (error, connectedUserTweet) => {//?
 
         if (error) {
             response.send(error.message);
         }
-        response.render(('connectedUserTweets.ejs') ,  { connectedUserTweet});
-        
-       
+        response.render(('connectedUserTweets.ejs'), { connectedUserTweet });
+
+
     })
 }
-//III_a Utilisateur Connecté je veux consulter le détail d'un tweet
+//III_a Utilisateur je veux consulter le détail d'un tweet
 exports.findUsersTweetsDetails = (request, response) => {
 
     const { id } = request.params;
@@ -68,56 +68,60 @@ exports.findUsersTweetsDetails = (request, response) => {
 exports.findConnectedUsersTweetsDetails = (request, response) => {
 
     const { id } = request.params;
+    // console.log(id);
     const { tweetId } = request.params;
 
     tweets.getConnectedUsersTweetsDetails(tweetId, (error, connectedUserTweetDet) => {//?
 
-        response.render(('connectedUserTweetsDetails.ejs'), {connectedUserTweetDet, tweetId });
+        response.render(('connectedUserTweetsDetails.ejs'), { connectedUserTweetDet, tweetId });
 
     })
 
 }
 
-
-
-
 //IV_b Utilisateur connecté je veux ajouter un tweet
 exports.connectedUserPostNewTweet = (request, response) => {
 
-    const { user } = request; 
+    const { user } = request; //username
 
-    tweets.getConnectedUserTweets(user, (error, connectedUserTweets) => {//?
+    tweets.getUserId(user, (error, connectedUserTweets) => {
 
         if (error) {
             response.send(error.message);
         }
 
-        const idUser = connectedUserTweets[0].id_user;
+        console.log('rahhh', connectedUserTweets[0].id_user);
 
-        tweets.postTweet(request.body, idUser, (error, result) =>{
+        let idUser = connectedUserTweets[0].id_user;
+
+        tweets.postTweet(request.body, idUser, (error, result) => {
             if (error) {
                 response.send(error.message);
             }
             response.redirect('/')
             console.log(request.body);
         })
-       
     })
+
+   
 }
 
 //V-Utilisateur connecté je souhaite supprimer un tweet
 exports.deleteUserTweets = (request, response) => {
 
-    const { id } = request.params;
+    const { tweetsId } = request.params;
+    console.log(tweetsId);
 
-    tweets.deleteTweet(id, (error, result) => {//?
+    tweets.deleteTweet(tweetsId, (error, result) => {//?
 
         if (error) {
             response.send(error.message);
         }
         response.redirect('/');
+
     })
-    
+
+
 }
 
 //VI-Utilisateur je veux modifier le text de mon tweet
@@ -126,7 +130,7 @@ exports.uptadeUserTweets = (request, response) => {
     const { id } = request.params;
     const { tweetsId } = request.params;
 
-    tweets.putUserNewTweet(tweetsId, request.body["message"], (error) => {//?
+    tweets.putUserNewTweet(tweetsId, request.body["message"], (error) => {
 
         if (error) {
             response.send(error.message);
@@ -134,7 +138,7 @@ exports.uptadeUserTweets = (request, response) => {
         response.redirect('/username')
 
     })
-  
+
 }
 
 

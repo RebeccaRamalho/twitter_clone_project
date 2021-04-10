@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/iconTwitter.png">
+    <title>Twitter</title>
 </head>
 
 <body>
@@ -14,13 +16,11 @@
 
     <% userTweetDet.forEach((element, index)=> { %>
 
-        <p>Created the: <%= element.creation_date %>
-        </p>
-        <p> by: <%= element.username %>
+        <p>Created the: <%= element.creation_date %> by: <%= element.username %>
         </p>
         <% }) %>
 
-       
+
 
 
 
