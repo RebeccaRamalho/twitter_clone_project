@@ -55,12 +55,10 @@ exports.newAccount = (request, response) => {
                     response.send(error.message)
                 };
 
-                // console.log(hash);
-
                 /*b_we stock usapper's data (including the hashing psswd) into a variable so we can 
                   send it to the model so that the model can create the user in the db */
 
-                const newUser = {/*comment récupère t-il ces données si il est dans une          autre fonction qui ne les a pas en paramètre?*/
+                const newUser = {
                     first_name,
                     last_name,
                     birthday,
@@ -154,7 +152,7 @@ exports.authenticate = (request, response) => {
                 else {
 
                     const user = {
-                        id: result[0].id,
+                        // id: result[0].id,
                         last_name: result[0].last_name,
                         username: result[0].username,//ou récupère t-il ça?
                         exp: MAXAGE//expiration of the token of a specific user; 
@@ -168,7 +166,7 @@ exports.authenticate = (request, response) => {
                         else {
                             request.user = user;//request of not just on element of the const user but of all element of it;
                             // console.log(user);
-                            //on stocke le token dans le cookie et ondonne une durée de vie au cookie;
+                            //on stocke le token dans le cookie et on donne une durée de vie au cookie;
                             response.cookie('authcookie', token, { maxAge: 60000 * 60000 * 1000 });
                             response.redirect('/');
                         }
@@ -189,3 +187,15 @@ exports.logout = (request, response) => {
     response.clearCookie("authcookie");
     response.redirect("/login");
 }
+
+
+
+
+
+
+
+
+
+
+
+
