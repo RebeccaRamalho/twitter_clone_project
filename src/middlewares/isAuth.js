@@ -1,52 +1,38 @@
-const cookieParser = require('cookie-parser');
-const { response } = require('express');
-const jwt = require('jsonwebtoken');
+const cookieParser = require("cookie-parser");
+const { response } = require("express");
+const jwt = require("jsonwebtoken");
 
-const SECRET = 'pouetpouet';//?
+const SECRET = "pouetpouet"; //?
 
 const isAuth = (request, response, next) => {
+  //I_We retreive the token when an user try to access all the tweet of an user
+  const token = request.cookies.authcookie;
 
-    //I_We retreive the token when an user try to access all the tweet of an user
-    const token = request.cookies.authcookie; 
+  //II_We check if the token is valid or not
+  jwt.verify(token, SECRET, (error, user) => {
+    /*a_error managment*/
 
-    // console.log(token);
+    if (error) {
+      response.send(error.message);
+    } else {
+    /*b_checking of token validity*/
+      const { username, exp } = user; // where do we retreive the name?
 
-    //II_We check if the token is valid or not
-    jwt.verify(token, SECRET, (error, user) => {
+      /*1_if the cookie experation date is inferior to the actual date then the cookie has expired*/
 
-        /*a_error managment*/
+      if (Date.now() / 1000 >= exp) {
+        //why = and not just superior?
+        response.clearCookie("authcookie");
+        response.send("youre session has expired, try to reconnect you.");
+      } else {
+        request.user = { username };
+        // console.log(user);
+        next(); //?
+      }
+    }
+  });
 
-        if(error){
-            response.send(error.message)
-        }
-        /*b_checking of token validity*/
-        else{
+  console.log(token);
+};
 
-            const {username, exp} = user;// where do we retreive the name?
-
-            /*1_if the cookie experation date is inferior to the actual date then the cookie has expired*/
-
-            if(Date.now() /1000 >= exp){//why = and not just superior?
-                response.clearCookie('authcookie');
-                response.send("youre session has expired, try to reconnect you.");
-            }
-            else{
-
-                request.user = {username};
-                // console.log(user);
-                next();//?
-
-            }
-
-        }
-
-       
-
-
-    })
-
-
-    console.log(token);
-}
-
-module.exports = isAuth; 
+module.exports = isAuth;

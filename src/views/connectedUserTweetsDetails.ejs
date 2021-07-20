@@ -1,65 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/emojionearea.css">
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-
-    <script src="/css/emojionearea.js"></script>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Twittar</title>
-</head>
+  </head>
 
-<body>
- 
+  <body>
     <% connectedUserTweetDet.forEach((element, index)=> { %>
-    
-   
-        <form action="/tweets/<%=tweetId%>" method="post" class="tweet-container-form hr">
-            <div class="tweet-container-message">
-                <label for="message"></label>
-                <div class="tweet-container-text">
-                    <textarea name="message" id="message" placeholder=" tweet : <%= element.texts %> created the: <%= element.creation_date %> by: @<%= element.username %>
-                    "></textarea>
-                </div>
 
-            </div>
-            <div class="tweet-container-button">
-                <button type="submit" class="tweet-button button1">Modify</button>
-            </div>
+    <form
+      action="/tweets/<%=tweetId%>"
+      method="post"
+      class="tweet-container-form hr"
+    >
+      <div class="tweet-container-message">
+        <label for="message"></label>
+        <div class="tweet-container-text">
+          <textarea
+            name="message"
+            id="message"
+            placeholder="tweet : <%= element.texts %> created the: <%= element.creation_date %> by: @<%= element.username %>
+                    "
+          ></textarea>
 
+          <div id="appearEmo">
+            <div>🙂</div>
+            <div>😁</div>
+            <div>🤓</div>
+          </div>
+        </div>
+      </div>
+      <div class="tweet-container-button">
+        <button type="submit" class="tweet-button button1">Modify</button>
+      </div>
+    </form>
 
-        </form>
+    <form action="/tweet/<%= element.id %>" method="post" class="">
+      <div class="tweet-container-button">
+        <button type="submit" class="tweet-button button2" id="boutton">
+          Delete
+        </button>
+      </div>
+    </form>
 
-        <form action="/tweet/<%= element.id %>" method="post" class="">
+    <div id="randomEmoAppear">
+      <div>🦍</div>
+    </div>
 
-            <div class="tweet-container-button">
-                <button type="submit" class="tweet-button button2">Delete</button>
-            </div>
+    <% }) %>
 
-        </form>       
+    <div id="emoji">
+      <div>😀</div>
+      <div>😁</div>
+      <div>😂</div>
+      <div>🤣</div>
+      <div>😃</div>
+      <div>😄</div>
+      <div>😅</div>
+      <div>😆</div>
+      <div>😉</div>
+      <div>😊</div>
+      <div>😋</div>
+      <div>😇</div>
+      <div>😊</div>
+      <div>🙂</div>
+      <div>🙃</div>
+      <div>😉</div>
+      <div>😌</div>
+      <div>😍</div>
 
-        <% }) %>
+      <div>🥰</div>
+      <div>😘</div>
+      <div>😗</div>
+      <div>😙</div>
+      <div>😚</div>
+      <div>😋</div>
+      <div>😛</div>
+      <div>😝</div>
+      <div>😜</div>
+      <div>🤪</div>
+      <div>🤨</div>
+      <div>🧐</div>
+      <div>🤓</div>
+      <div>😎</div>
+      <div>🤩</div>
+      <div>🥳</div>
+      <div>😏</div>
+      <div>😒</div>
 
-        <script type="text/javascript">
-            $(document).ready(function() {
-              $("#message").emojioneArea({
-                pickerPosition: "bottom"
-              });     
-            });
-          </script>
+      <div>😞</div>
+      <div>😔</div>
+      <div>😟</div>
+      <div>😕</div>
+      <div>😣</div>
+      <div>😖</div>
+      <div>😫</div>
+      <div>😩</div>
+      <div>🥺</div>
+      <div>😢</div>
+      <div>😭</div>
+      <div>😤</div>
+      <div>😠</div>
+      <div>😡</div>
+      <div>🤬</div>
+      <div>😱</div>
+      <div>😨</div>
+      <div>😓</div>
 
+      <div>🤗</div>
+      <div>🤔</div>
+      <div>🤭</div>
+      <div>🤫</div>
+      <div>🤥</div>
+      <div>😶</div>
+      <div>😐</div>
+      <div>😑</div>
+      <div>😬</div>
+      <div>🥱</div>
+      <div>😴</div>
+      <div>🤢</div>
+      <div>🤮</div>
+      <div>😈</div>
+      <div>💀</div>
+      <div>☠️</div>
+      <div>👽</div>
+      <div>👾</div>
 
+      <div>🤖</div>
+      <div>😺</div>
+      <div>😹</div>
+      <div>😻</div>
+      <div>🙀</div>
+      <div>😿</div>
+      <div>👌</div>
+      <div>👏</div>
+      <div>🙏</div>
+      <div>🕵️‍♀️</div>
+      <div>🕵🏿‍♀️</div>
+      <div>👩🏾‍🔬</div>
+      <div>🧑🏾‍🎨</div>
+      <div>👩🏿‍🏫</div>
+      <div>👩🏿‍🦱</div>
+      <div>🦸</div>
+      <div>🦹‍♀️</div>
+      <div>💃</div>
+      <div>👩‍❤️‍💋‍👨</div>
 
+      <div>🐙</div>
+      <div>🦕</div>
+      <div>🐬</div>
+      <div>🦧</div>
+      <div>🦍</div>
+    </div>
 
+    <div id="triangle"></div>
 
-</body>
+    <script>
+      /*I-Emojis appear*/
 
+      //Retreival of the element where the event click occur:
+      const htmlEmo = Array.from(document.getElementById("emoji").children);
+      //=>[<div>, <div>, ... ]
+
+      htmlEmo.forEach((element, index) => {
+        let emoInDiv = htmlEmo[index]; //looping through the htmlEmo array. Result=> <div>"😋"</div>
+
+        let emoInString = htmlEmo[index].textContent; //Result => "😋"
+
+        emoInDiv.addEventListener("click", function () {
+          //the user must click on an html element
+          let boxMessage = document.getElementById("message").value; //<e retreive the textArea value where we want to add the emoji
+
+          const tweets = boxMessage + emoInString; //adding the emoji selected to the textArea value
+
+          document.getElementById("message").value = tweets; //we inject the new value to the textArea
+        });
+      });
+
+      /*II_Emoji change opacity*/
+
+      const originalEmo = document.getElementById("appearEmo"); //html el where we gonna click to make appear all the emoji
+      const EmojiId = document.getElementById("emoji");
+
+      originalEmo.addEventListener("click", function () {
+        EmojiId.style.opacity = 1;
+      });
+
+      /*III_Random Emoji*/
+
+      getRandomInt = (max) => {
+        return Math.floor(Math.random() * max);
+      }; //getting radom int between 1 an 2
+
+      /******/
+
+      let emojiIndex = getRandomInt(3); //i retreive a number between 0 and 2
+      const randomEmoji = document.querySelector("#appearEmo").children; //i retreive all the emoji
+
+      /***/
+
+      let htmlRandomeEmo = document.querySelector("#randomEmoAppear"); //html el where emo is pushed
+      // let gg = document.querySelector("#randomEmoAppearsss"); //element where the is hover event
+      let em = randomEmoji[emojiIndex].textContent; //random emo between 1 an 2 index
+      let re = randomEmoji[emojiIndex]; //random emo where my mouse is on
+      console.log("random emo", htmlRandomeEmo);
+
+      /***/
+      function myScript(htmlRandomeEmo) {
+        htmlRandomeEmo.innerHTML = randomEmoji[emojiIndex].textContent; //i insert a random number in the emoji index
+      }
+      /***/
+      htmlRandomeEmo.addEventListener("mouseover", function () {
+        myScript(htmlRandomeEmo);
+        console.log("hummm", htmlRandomeEmo);
+      });
+      /***/
+    </script>
+  </body>
 </html>
