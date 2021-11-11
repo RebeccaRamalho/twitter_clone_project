@@ -20,7 +20,7 @@ Simplified twitter clone with server side rendering.
 
 #### Technologies
 
-<img src="./src/assets/32px-Unofficial_JavaScript_logo_2.svg.png" alt="javascript logo"/>
+<img src="./src/assets/images/32px-Unofficial_JavaScript_logo_2.svg.png" alt="javascript logo"/>
 
 
 [Back To The Top](#read-me-template)
