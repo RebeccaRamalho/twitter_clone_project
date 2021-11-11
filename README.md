@@ -20,8 +20,8 @@ Simplified twitter clone with server side rendering.
 
 <div>
     <img src="./src/assets/images/32px-Unofficial_JavaScript_logo_2.svg.png" alt="javascript logo"/>
-    <img src="./src/assets/images/node.png" alt="node logo"width="40px"/>
-    <img src="./src/assets/images/ejs.png" alt="ejs logo" width="40px"/>
+    <img src="./src/assets/images/node.png" alt="node logo"width="60px"/>
+    <img src="./src/assets/images/ejs.png" alt="ejs logo" width="60px"/>
     <img src="./src/assets/images/logo-mysql.png" alt="mysql logo" width="40px"/>
     <img alt="sass logo" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg"/>
     <img alt="git logo" width="47px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/512px-Git-logo.svg.png"/>
