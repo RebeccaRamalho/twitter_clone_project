@@ -1,7 +1,5 @@
-# Read Me Template
 
 ![Project Image](project-image-url)
-
 
 ---
 
