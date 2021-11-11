@@ -21,6 +21,9 @@ Simplified twitter clone with server side rendering.
 #### Technologies
 
 <img src="./src/assets/images/32px-Unofficial_JavaScript_logo_2.svg.png" alt="javascript logo"/>
+<img src="./src/assets/images/node.png" alt="node logo"/>
+<img src="./src/assets/images/ejs.png" alt="ejs logo"/>
+<img src="./src/assets/images/logo-mysql.png" alt="mysql logo"/>
 
 
 [Back To The Top](#read-me-template)
