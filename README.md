@@ -47,7 +47,7 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
 
             sudo apt install nodejs
 
-2. Initialiser of a json package
+2. Initialisation of a json package
 
             npm init
             
