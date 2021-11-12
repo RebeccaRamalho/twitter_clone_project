@@ -47,7 +47,7 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
 
             sudo apt install nodejs
 
-2. Initialisation of a json package
+2. Initialisation of a package.json
 
             npm init
             
@@ -66,8 +66,6 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
         npm install express-session
         npm install express-flash-message
         npm install express fileupload
-        npm install local-storage
-        npm install node-localstorage
 
 
 ---
