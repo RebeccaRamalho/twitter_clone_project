@@ -72,9 +72,6 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
 
 #### API Reference
 
-```html
-<p>dummy code</p>
-```
 
 ---
 
