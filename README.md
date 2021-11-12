@@ -69,11 +69,10 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database th
 
 ## Contributors
 
-- Kanu Rebecca - [Github](https://github.com/RebeccaRamalho)
-
-[Back To The Top](#read-me-template)
+- Kanu Rebecca - [Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+  [Back To The Top](#read-me-template)
 
 <br />
 <br />
 
-[Github]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+[github]: https://github.com/RebeccaRamalho
