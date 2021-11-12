@@ -43,8 +43,32 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
 #### Installation
 
 ```html
-<h1>Node js installation</h1>
-    <p>sudo apt install nodejs</p>
+. Installation of Nodejs
+
+            sudo apt install nodejs
+
+2. Initialiser of a json package
+
+            npm init
+
+3. Installation of modules
+
+        npm install express        
+        npm install -D nodemon        
+        npm install mysql2        
+        npm install dotenv       
+        npm install body-parser        
+        npm install cookie-parser
+        npm install cors
+        npm install jsonwebtoken         
+        npm install bcrypt
+        npm install ejs
+        npm install express-session
+        npm install express-flash-message
+        npm install express fileupload
+        npm install local-storage
+        npm install node-localstorage
+
 ```
 
 ---
