@@ -14,7 +14,7 @@
 
 ## Description
 
-Development of a simplified clone of Twitter in Node.js with a MySQL database that stores the data, while respecting the MVC architecture and including JWT authentication.
+Development of a simplified clone of Twitter in Node.js with a MySQL database, while respecting the MVC architecture and including JWT authentication.
 
 #### Technologies
 
