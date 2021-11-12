@@ -7,8 +7,7 @@
 - [Description](#description)
 - [How To Use](#how-to-use)
 - [References](#references)
-- [License](#license)
-- [Contributors info](#contributor-info)
+- [Contributors info](#contributors)
 
 ---
 
@@ -37,8 +36,6 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
 
 </div>
 
-
-
 ---
 
 ## How To Use
@@ -51,19 +48,13 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
 <p>dummy code</p>
 ```
 
-
-
 ---
 
 ## References
 
-
-
 <!-- --- -->
 
 <!-- ## License -->
-
-
 
 ---
 
@@ -71,9 +62,7 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
 
 - <spam>Kanu Rebecca:</spam> [<img alt="linkedin link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][github]
 
-
 <br />
 <br />
 
 [github]: https://github.com/RebeccaRamalho
-
