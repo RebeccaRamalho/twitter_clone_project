@@ -42,6 +42,13 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
 
 #### Installation
 
+```html
+<h1>Node js installation</h1>
+    <p>sudo apt install nodejs</p>
+```
+
+---
+
 #### API Reference
 
 ```html
