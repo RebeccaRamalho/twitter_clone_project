@@ -41,7 +41,7 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
 
 ## How To Use
 
-#### Installation
+#### ⚙️ Installation
 
 
 1. Installation of Nodejs
