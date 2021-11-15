@@ -16,7 +16,7 @@
 
 Development of a simplified clone of Twitter in Node.js with a MySQL database, while respecting the MVC architecture and including JWT authentication.
 
-#### Technologies
+#### 🔬Technologies
 
 <div>
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
