@@ -1,5 +1,5 @@
 # Twitter Clone
-![Project Image](project-image-url)
+
 
 ---
 
@@ -86,7 +86,7 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
 
 ## Contributors
 
-- <spam>Kanu Rebecca:</spam> [<img alt="linkedin link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][github]
+- <spam>Kanu Rebecca</spam> [<img alt="linkedin link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][github]
 
 <br />
 <br />
