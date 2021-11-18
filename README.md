@@ -1,5 +1,6 @@
 # 🚀 Twitter Clone
 
+<img src="./src/assets/images/twitter_clone.png" alt="site image"/>
 
 ---
 
@@ -12,7 +13,7 @@
 
 ---
 
-##  📖 Description
+## 📖 Description
 
 Development of a simplified clone of Twitter in Node.js with a MySQL database, while respecting the MVC architecture and including JWT authentication.
 
@@ -43,36 +44,34 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
 
 #### ⚙️ Installation
 
-
-1. Installation of Nodejs
+1.  Installation of Nodejs
 
             sudo apt install nodejs
 
-2. Initialisation of a package.json
+2.  Initialisation of a package.json
 
             npm init
-            
-3. Installation of modules
 
-            npm install express        
-            npm install -D nodemon        
-            npm install mysql2        
-            npm install dotenv       
-            npm install body-parser        
+
+3.  Installation of modules
+
+            npm install express
+            npm install -D nodemon
+            npm install mysql2
+            npm install dotenv
+            npm install body-parser
             npm install cookie-parser
             npm install cors
-            npm install jsonwebtoken         
+            npm install jsonwebtoken
             npm install bcrypt
             npm install ejs
             npm install express-session
             npm install express-flash-message
             npm install express fileupload
 
-
 ---
 
 #### API Reference
-
 
 ---
 
