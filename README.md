@@ -1,7 +1,8 @@
 # 🚀 Twitter Clone
 
-<img src="./src/assets/images/twitter_clone.png" alt="site image"/>
-
+<div>
+  <img src="./src/assets/images/twitter_clone.png" alt="site image"/>
+</div>
 ---
 
 ### Table of Contents
@@ -51,7 +52,6 @@ Development of a simplified clone of Twitter in Node.js with a MySQL database, w
 2.  Initialisation of a package.json
 
             npm init
-
 
 3.  Installation of modules
 
