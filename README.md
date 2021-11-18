@@ -1,7 +1,7 @@
 # 🚀 Twitter Clone
 
 <div>
-  <img src="./src/assets/images/twitter_clone.png" alt="site image"/>
+  <img src="./src/assets/images/twitter_clone_img.png" alt="site image"/>
 </div>
 ---
 
