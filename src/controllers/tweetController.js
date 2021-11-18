@@ -8,7 +8,6 @@ exports.findTwenty = (request, response) => {
       response.send(error.message);
     } else {
       response.render("home.ejs", { tweetsInfo });
-      //   console.log("yooo");
     }
   });
 };
