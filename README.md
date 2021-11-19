@@ -3,7 +3,7 @@
 <div>
   <img src="./src/assets/images/simplified_twitter_clone_image.png" alt="site image"/>
 </div>
----
+
 
 ### Table of Contents
 
